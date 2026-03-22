@@ -4,6 +4,7 @@ import Hero from './Component/Hero'
 import TrustedBy from './Component/TrustedBy'
 import Services from './Component/Services'
 import OurWork from './Component/OurWork'
+import Teams from './Component/Teams'
 
 const App = () => {
 
@@ -15,7 +16,7 @@ const App = () => {
       <TrustedBy />
       <Services />
       <OurWork />
-      
+      <Teams />
       
     </div>
   )
