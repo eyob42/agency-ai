@@ -3,6 +3,7 @@ import Navbar from './Component/Navbar'
 import Hero from './Component/Hero'
 import TrustedBy from './Component/TrustedBy'
 import Services from './Component/Services'
+import OurWork from './Component/OurWork'
 
 const App = () => {
 
@@ -13,6 +14,8 @@ const App = () => {
       <Hero />
       <TrustedBy />
       <Services />
+      <OurWork />
+      
       
     </div>
   )
