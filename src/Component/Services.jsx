@@ -1,37 +1,42 @@
-import React from "react";
-import assets from "../assets/assets";
-import Title from "./Title";
-import ServiceCard from "./ServiceCard";
+import React from 'react';
+import assets from '../assets/assets';
+import Title from './Title';
+import ServiceCard from './ServiceCard';
+import { motion } from 'motion/react';
 
 const Services = () => {
   const servicesData = [
     {
-      title: "Advertising",
+      title: 'Advertising',
       description:
-        "We turn bold ideas into powerful digitals solutions that connect, engage...",
+        'We turn bold ideas into powerful digitals solutions that connect, engage...',
       icon: assets.ads_icon,
     },
     {
-      title: "Content marketing",
-      description: "We help you execute your plan and deliver results. ",
+      title: 'Content marketing',
+      description: 'We help you execute your plan and deliver results. ',
       icon: assets.marketing_icon,
     },
     {
-      title: "Content writing",
+      title: 'Content writing',
       description:
-        "We help you create a marketing strategy that drives results.",
+        'We help you create a marketing strategy that drives results.',
       icon: assets.content_icon,
     },
     {
-      title: "Social media",
+      title: 'Social media',
       description:
-        "We help you build strong social media presence and engage with your audience. ",
+        'We help you build strong social media presence and engage with your audience. ',
       icon: assets.social_icon,
     },
   ];
 
   return (
-    <div
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      transition={{ staggerChildren: 0.2 }}
+      viewport={{ once: true }}
       id="services"
       className="relative flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white"
     >
@@ -51,7 +56,7 @@ const Services = () => {
           <ServiceCard key={index} service={service} index={index} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
